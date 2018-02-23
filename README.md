@@ -13,10 +13,10 @@ dist2port = function(pp, ports){
   for(i in 1:nrow(pp)){
   xpp = SpatialPoints(pp[i,], proj4string = crs(wgs84))
   distmat = spDists(ports@coords, xpp@coords, longlat = T)
-  dist_ok = distmat[which.min(distmat),]
+  distk = distmat[which.min(distmat),]
   port_name = ports@data[which.min(distmat),"name"]
   port_coord = ports@coords[which.min(distmat),]
-  distport = rbind(distport, data.frame(name = port_name, x = port_coord[1], y = port_coord[2], dist = dist_ok))
+  distport = rbind(distport, data.frame(name = port_name, x = port_coord[1], y = port_coord[2], dist = dist))
   rownames(distport)[i] <- i
   }
   return(distport)
