@@ -8,6 +8,7 @@ Estimate distance of a point to the nearest port and, if using <a href="http://w
 ```{r global_options, include = FALSE}
 #pp: 2 column data.frame (x,y) 
 #ports: Shapefile of world's port from Natural Earth web site
+#distport = dataframe with name, coords and distance 
 dist2port = function(pp, ports){
   require(sp)
   distport = NULL
@@ -18,7 +19,7 @@ dist2port = function(pp, ports){
   dist = distmat[which.min(distmat),]
   port_name = ports@data[which.min(distmat),"name"]
   port_coord = ports@coords[which.min(distmat),]
-  distport = rbind(distport, data.frame(port_name = port_name, x = as.numeric(port_coord[1]), y = as.numeric(port_coord[2]), dist = dist))
+  distport = rbind(distport, data.frame(port_name = port_name, port_lon = as.numeric(port_coord[1]), port_lat = as.numeric(port_coord[2]), dist_port = dist))
   }
   return(distport)
 }
