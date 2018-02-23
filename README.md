@@ -18,7 +18,7 @@ dist2port = function(pp, ports){
   dist = distmat[which.min(distmat),]
   port_name = ports@data[which.min(distmat),"name"]
   port_coord = ports@coords[which.min(distmat),]
-  distport = rbind(distport, data.frame(name = port_name, x = as.numeric(port_coord[1]), y = as.numeric(port_coord[2]), dist = dist))
+  distport = rbind(distport, data.frame(port_name = port_name, x = as.numeric(port_coord[1]), y = as.numeric(port_coord[2]), dist = dist))
   }
   return(distport)
 }
