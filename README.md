@@ -3,12 +3,12 @@ Some helpful function to use in fishery spatial analysis.
 
 ##dist2port
 
-Estimate distance of a point to the nearest port and, if using <a href="http://www.naturalearthdata.com/downloads/10m-cultural-vectors/ports/"> Natual Earth shapefile of world's ports </a>, retrieves name and coordinates of the ports.
+Estimate distance (in Km) of a point to the nearest port and, if using <a href="http://www.naturalearthdata.com/downloads/10m-cultural-vectors/ports/"> Natual Earth shapefile of world's ports </a>, retrieves name and coordinates of the ports.
 
 ```{r global_options, include = FALSE}
-#pp: 2 column data.frame (x,y) 
+#pp: 2 column data.frame (x,y) in wgs84
 #ports: Shapefile of world's port from Natural Earth web site
-#distport = dataframe with name, coords and distance 
+#distport = dataframe with name, coords and distance (km) 
 dist2port = function(pp, ports){
   require(sp)
   distport = NULL
