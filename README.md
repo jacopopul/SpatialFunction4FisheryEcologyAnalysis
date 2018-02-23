@@ -1,9 +1,9 @@
-# SpatialFunction4FisheryEcologyAnalysis
+# R_SpatialFunction4FisheryEcologyAnalysis
 Some helpful function to use in fishery spatial analysis.
 
 ##dist2port
 
-Estimate distance (in Km) of a point to the nearest port and, if using <a href="http://www.naturalearthdata.com/downloads/10m-cultural-vectors/ports/"> Natual Earth shapefile of world's ports </a>, retrieves name and coordinates of the ports.
+Estimate distance (in Km) of a point to the nearest port. This function was created to extract also relavant information from the shapefile of world's ports from <a href="http://www.naturalearthdata.com/downloads/10m-cultural-vectors/ports/"> Natual Earth </a> web site, the function retrieves name and coordinates of the ports.
 
 ```{r global_options, include = FALSE}
 #pp: 2 column data.frame (x,y) in wgs84
