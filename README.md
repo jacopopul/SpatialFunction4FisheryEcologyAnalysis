@@ -3,7 +3,7 @@ Some helpful function to use in fishery spatial analysis.
 
 ##dist2port
 
-Estimate distance (in Km) of a point to the nearest harbour. This function retrieves name, coordinates and distance of the neareset harbour. The shapefile of world's harbours is download from <a href="http://www.naturalearthdata.com/downloads/10m-cultural-vectors/ports/"> Natual Earth </a> web site.
+Estimate distance (in Km) of a point to the nearest harbour. The function also retrieves name and coordinates of the neareset harbour. The shapefile of world's harbours is downloaded from <a href="http://www.naturalearthdata.com/downloads/10m-cultural-vectors/ports/"> Natual Earth </a> web site.
 
 ```{r global_options, include = FALSE}
 ##Inputs
