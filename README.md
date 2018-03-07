@@ -1,5 +1,5 @@
 # R_SpatialFunction4FisheryEcologyAnalysis
-Some helpful function to use in fishery spatial analysis.
+Some helpful functions to use in fishery spatial analysis with R.
 
 ##dist2port
 
